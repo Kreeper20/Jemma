@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import frame from './public/group-128.png'
 import ellipse from './public/ellipse-109.png'
-import social from './public/frame-124.png'
 import polygon17 from './public/polygon17.svg'
 import phone from './public/phone.png'
 import kaizo from './public/kaizo.png'
 import sb from './public/sb.png'
 import hybrid from './public/hybrid.png'
 import gcunite from './public/gcunite.png'
-import lavish from './public/Lavish.png'
+import lavish from './public/lavish.png'
 import book from './public/books.png'
 import Header from "./header.jsx";
 
