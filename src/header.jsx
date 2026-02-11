@@ -42,16 +42,16 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center font-bold gap-6 xl:gap-10 underline">
-          <a href="#" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Home</a>
-          <a href="#" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Newsletter</a>
-          <a href="#" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Toolkit</a>
-          <a href="#" className="text-sm xl:text-base hover:text-purple-20 transition-colors">About</a>
-          <a href="#" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Testimonials</a>
+          <a href="#home" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Home</a>
+          <a href="#newsletter" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Newsletter</a>
+          <a href="#toolkit" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Toolkit</a>
+          <a href="#about" className="text-sm xl:text-base hover:text-purple-20 transition-colors">About</a>
+          <a href="#testimonials" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Testimonials</a>
         </nav>
 
         {/* Desktop CTA */}
         <a
-          href="#"
+          href="#contact"
           className="hidden lg:flex w-40 xl:w-48 h-11 xl:h-12 border-[#450065] border-2 xl:border-4 items-center justify-center bg-white hover:bg-[#450065] hover:text-white transition-all duration-300"
         >
           <span className="font-bold text-sm xl:text-base underline">Contact Us</span>
@@ -65,30 +65,24 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col gap-1 border-t border-gray-200 pt-4">
-          <a href="#" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="home" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Home
           </a>
-          <a href="#" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="newsletter" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Newsletter
           </a>
-          <a href="#" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="toolkit" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Toolkit
           </a>
-          <a href="#" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="about" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             About
           </a>
-          <a href="#" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="testimonials" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Testimonials
           </a>
 
-          {/* Mobile CTA */}
-          <a
-            href="#"
-            onClick={() => setMenuOpen(false)}
-            className="mt-3 mb-2 flex h-12 border-[#450065] border-2 items-center justify-center hover:bg-[#450065] hover:text-white transition-all duration-300"
-          >
-            <span className="font-bold text-base underline">Contact Us</span>
-          </a>
+         
+          
         </nav>
       </div>
     </header>
