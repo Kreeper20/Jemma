@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import jema from './public/jema.png';
+import jema from './public/jemma.PNG';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,19 +65,19 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col gap-1 border-t border-gray-200 pt-4">
-          <a href="home" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#home" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Home
           </a>
-          <a href="newsletter" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#newsletter" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Newsletter
           </a>
-          <a href="toolkit" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#toolkit" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Toolkit
           </a>
-          <a href="about" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#about" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             About
           </a>
-          <a href="testimonials" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#testimonials" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
             Testimonials
           </a>
 
