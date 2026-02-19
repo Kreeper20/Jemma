@@ -24,6 +24,7 @@ import insta from './public/insta.png'
 import whatsapp from './public/whatsapp.png'
 import linked from './public/linked.png'
 import Header from "./header.jsx";
+import Newsletter from "./newsleter.jsx";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -33,7 +34,7 @@ function App() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-20 overflow-hidden" id='home'>
+      <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-28 overflow-hidden mb-12 sm:mb-0" id='home'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <img
@@ -65,18 +66,14 @@ function App() {
 
               <div className="max-w-sm mx-auto lg:max-w-md lg:mx-0 lg:ml-auto bg-white rounded-2xl shadow-2xl p-5 sm:p-6 border border-gray-100">
                 <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-semibold text-gray-900 underline text-sm sm:text-base">
+                  <h4 className="font-bold text-gray-900 underline text-lg sm:text-l">
                     Insight Overview :
                   </h4>
                 </div>
                 <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 text-sm sm:text-base"></h3>
-                      <p className="text-xs sm:text-sm text-gray-500 underline">@_</p>
-                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-green-500 font-bold">
+                  <div className="flex items-end gap-2 text-green-500 font-bold">
                     <span className="text-xl sm:text-2xl">+3,523%</span>
                   </div>
                 </div>
@@ -87,8 +84,8 @@ function App() {
                     <p className="text-lg sm:text-xl font-bold text-gray-900">133,071</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-[10px] sm:text-xs text-gray-500 uppercase mb-1">Impressions</p>
-                    <p className="text-lg sm:text-xl font-bold text-gray-900">122,</p>
+                    <p className="text-[10px] sm:text-sm text-gray-500 uppercase mb-1">Impressions</p>
+                    <p className="text-lg sm:text-xl font-bold mt-5 text-gray-900">122,012</p>
                   </div>
                   <div className="text-center">
                     <p className="text-[10px] sm:text-xs text-gray-500 uppercase mb-1">Content Interactions</p>
@@ -102,7 +99,7 @@ function App() {
       </section>
 
       {/* Newsletter Section - WITH SUBSTACK EMBED */}
-      <section className="py-14 sm:py-16 lg:py-20" id='newsletter'>
+      <section className="py-12 sm:py-16 lg:py-28 mb-12 sm:mb-0" id='newsletter'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center max-w-6xl mx-auto">
             <div className="text-center lg:text-left">
@@ -121,8 +118,16 @@ function App() {
                 systems behind top performing campaigns, giving you actionable guidance to grow your own brand on social
                 media.
               </p>
+
+              <a
+                onClick={() => setShowModal(true)}
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-full font-medium text-sm sm:text-base hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl"
+              >
+                Subscribe Now
+              </a>
              
             </div>
+            
 
             <div className="bg-gradient-to-br from-pink-100 to-purple-400 rounded-2xl sm:rounded-3xl h-72 sm:h-80 lg:h-96 flex items-center justify-center p-4 sm:p-6">
               <img
@@ -137,7 +142,7 @@ function App() {
       </section>
 
       {/* Toolkit Section */}
-      <section className="py-14 sm:py-16 lg:py-20" id='toolkit'>
+      <section className="py-12 sm:py-16 lg:py-28 mb-12 sm:mb-0" id='toolkit'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-20 font-bold mb-4 sm:mb-6">
@@ -196,7 +201,7 @@ function App() {
 
           <div className="text-center">
             <a
-              href="#"
+              href="https://wa.me/+2349027964720" target="_blank"
               className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-orange-20 text-white rounded-full font-medium text-sm sm:text-base hover:bg-purple-20 transition-all shadow-lg hover:shadow-xl"
             >
               Get the Toolkit
@@ -206,7 +211,7 @@ function App() {
       </section>
 
       {/* Beyond Social Media Management */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-white" id='about'>
+      <section className="py-12 sm:py-16 lg:py-28 bg-white mb-12 sm:mb-0" id='about'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl text-purple-20 sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
@@ -236,9 +241,14 @@ function App() {
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
                   <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
-                  <span>Analytics, Reporting & Performance Optimization</span>
+                  <span>Analytics, Reporting & Performance Optimization</span><br /><br />
                 </li>
               </ul>
+
+              <p className='text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed"'>
+                Expanded Services: <br />
+                Brand & digital consultation · Paid Advertising ·  Website design & development · SEO & search visibility optimization
+              </p>
 
               <div className="mt-6 sm:mt-8">
                 <a
@@ -254,7 +264,7 @@ function App() {
       </section>
 
       {/* Trusted by Brands */}
-      <section className="py-14 sm:py-16 lg:py-20 bg-gray-50" id='testimonials'>
+      <section className="py-12 sm:py-16 lg:py-28 bg-gray-50 mb-12 sm:mb-0" id='testimonials'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl text-purple-20 md:text-5xl font-bold mb-6 sm:mb-8">
@@ -337,7 +347,7 @@ function App() {
       </section>
 
       {/* Final CTA Section - WITH SUBSTACK MODAL */}
-      <section className="relative pt-8 sm:pt-10 lg:pt-12 pb-8 sm:pb-10 lg:pb-12 overflow-hidden" id='contact'>
+      <section className="relative pt-12 sm:pt-16 lg:pt-28 pb-12 sm:pb-16 lg:pb-28 overflow-hidden" id='contact'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-2xl sm:text-3xl md:text-4xl text-purple-20 lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -362,7 +372,7 @@ function App() {
                 Book a Free Strategy Call
               </a>
               <a
-                href="#"
+                href="https://wa.me/+2349027964720" target="_blank"
                 className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-gray-100 text-gray-900 rounded-full font-medium text-xs sm:text-sm md:text-base hover:bg-gray-200 transition-all text-center"
               >
                 Get the ToolKit
@@ -374,39 +384,8 @@ function App() {
                 Subscribe to Newsletter
               </button>
             </div>
-
-            {/* Substack Modal */}
-            {showModal && (
-              <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4"
-                onClick={() => setShowModal(false)}
-              >
-                <div
-                  className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 sm:p-8 relative"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <button
-                    onClick={() => setShowModal(false)}
-                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors text-xl cursor-pointer"
-                    aria-label="Close"
-                  >
-                    ✕
-                  </button>
-                  <div className="flex justify-center">
-                    <iframe className='w-full h-48 sm:h-56 lg:h-64 border border-gray-200 rounded-lg'
-                      scrolling="no"
-                      src="https://jemmadigital.substack.com/embed"
-                      
-                      title="Subscribe to Newsletter"
-                    />
-                  </div>
-
-                  <p className="text-gray-400 text-xs mt-4 text-center">
-                    No spam, ever. Unsubscribe anytime.
-                  </p>
-                </div>
-              </div>
-            )}
+            
+            <Newsletter showModal={showModal} setShowModal={setShowModal} />
 
             <div className="flex gap-4 justify-center items-center mt-8">
               <a href="mailto:info@tryjemma.com" target="_blank" rel="noopener noreferrer">
