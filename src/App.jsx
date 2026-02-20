@@ -107,8 +107,8 @@ function App() {
                 Go Behind The Feed With Jemma
               </h2>
 
-              <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start">
-                <img src={phone} alt="Decorative line" className="h-1 w-36 sm:w-48" />
+              <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start ">
+                <img src={phone} alt="Decorative line" className="h-1 w-36 sm:w-48 " />
               </div>
 
               <p className="text-gray-600 text-base font-semibold sm:text-lg mb-6 sm:mb-8 leading-relaxed">
@@ -133,7 +133,7 @@ function App() {
               <img
                 src={phone}
                 alt="Mobile phone preview"
-                className="w-full max-w-[14rem] sm:max-w-xs lg:max-w-sm h-auto object-contain"
+                className="w-full max-w-[14rem] sm:max-w-xs lg:max-w-sm h-auto object-contain transform transition-all duration-200 md:hover:scale-110"
                 loading="lazy"
               />
             </div>
@@ -155,7 +155,7 @@ function App() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-10 sm:mb-12">
             {/* Toolkit Item 1 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
               <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
                 <img src={calendar} alt="Content Calendar" className="max-w-full max-h-full object-contain" loading="lazy" />
               </div>
@@ -166,7 +166,7 @@ function App() {
             </div>
 
             {/* Toolkit Item 2 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
               <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
                 <img src={template} alt="Design Template" className="max-w-full max-h-full object-contain" loading="lazy" />
               </div>
@@ -177,7 +177,7 @@ function App() {
             </div>
 
             {/* Toolkit Item 3 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
               <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
                 <img src={book} alt="Expert E-Book" className="max-w-full max-h-full object-contain" loading="lazy" />
               </div>
@@ -188,7 +188,7 @@ function App() {
             </div>
 
             {/* Toolkit Item 4 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
               <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
                 <img src={kit} alt="Full Content Kit" className="max-w-full max-h-full object-contain" loading="lazy" />
               </div>
@@ -276,8 +276,8 @@ function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 text-orange-20 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-14">
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="grid grid-cols-1 text-orange-20 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-14 ">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 Jemma transformed our social strategy. The growth and engagement speak for themselves
@@ -285,7 +285,7 @@ function App() {
               <p className="text-xs sm:text-sm font-semibold text-gray-900">_Lavish Treats</p>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 So glad i have you all. I started all this at the right time. I have no idea I would start my own
@@ -294,7 +294,7 @@ function App() {
               <p className="text-xs sm:text-sm font-semibold text-gray-900">_Topp Lymphatics</p>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 Working with Jemma is like Having an in-house creative team without the overhead
@@ -302,7 +302,7 @@ function App() {
               <p className="text-xs sm:text-sm font-semibold text-gray-900">_Anu Taiwo Property</p>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 The Jemma Team have truly been godsend! Thank you for caring
