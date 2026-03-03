@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import jema from './public/jemma.PNG';
+import jema from './assets/jemma.PNG';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

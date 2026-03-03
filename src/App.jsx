@@ -1,28 +1,28 @@
 import { useState } from 'react'
-import frame from './public/group-128.png'
-import phone from './public/phone.png'
-import kaizo from './public/kaizo.png'
-import sb from './public/sb.png'
-import hybrid from './public/hybrid.png'
-import gcunite from './public/gcunite.png'
-import kit from './public/kit.jpg'
-import calendar from './public/calendar.jpg'
-import higherdrive from './public/higherdrive.png'
-import shape from './public/shaping.png'
-import boe from './public/boe.png'
-import vabe from './public/vabe.png'
-import atp from './public/atp.png'
-import twithkikky from './public/twithkikky.png'
-import md from './public/md.png'
-import john from './public/johncuisine.png'
-import lavish from './public/lavish.png'
-import template from './public/template.jpg'
-import book from './public/books.png'
-import tiktok from './public/tiktok.png'
-import mail from './public/mail.png'
-import insta from './public/insta.png'
-import whatsapp from './public/whatsapp.png'
-import linked from './public/linked.png'
+import frame from './assets/group-128.png'
+import phone from './assets/phone.png'
+import kaizo from './assets/kaizo.png'
+import sb from './assets/sb.png'
+import hybrid from './assets/hybrid.png'
+import gcunite from './assets/gcunite.png'
+import kit from './assets/kit.jpg'
+import calendar from './assets/calendar.jpg'
+import higherdrive from './assets/higherdrive.png'
+import shape from './assets/shaping.png'
+import boe from './assets/boe.png'
+import vabe from './assets/vabe.png'
+import atp from './assets/atp.png'
+import twithkikky from './assets/twithkikky.png'
+import md from './assets/md.png'
+import john from './assets/johncuisine.png'
+import lavish from './assets/lavish.png'
+import template from './assets/template.jpg'
+import book from './assets/books.png'
+import tiktok from './assets/tiktok.png'
+import mail from './assets/mail.png'
+import insta from './assets/insta.png'
+import whatsapp from './assets/whatsapp.png'
+import linked from './assets/linked.png'
 import Header from "./header.jsx";
 import Newsletter from "./newsleter.jsx";
 
@@ -407,6 +407,10 @@ function App() {
           </div>
         </div>
       </section>
+
+      <footer className="w-full text-center py-4 bg-purple-20 text-white mt-8">
+        &copy; {new Date().getFullYear()} Jemma Digitals. All Rights Reserved.
+      </footer>
     </div>
   );
 }
