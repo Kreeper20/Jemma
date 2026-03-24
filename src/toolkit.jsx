@@ -1,11 +1,69 @@
-import { useState } from "react";
+import { useState } from 'react'
 import book from './assets/books.png'
 import calendar from './assets/calendar.jpg'
 import kit from './assets/kit.jpg'
 import template from './assets/template.jpg'
 
+const PAYSTACK_PUBLIC_KEY = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_51234567890abcdef'
+
 export default function Toolkit() {
-  const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState('');
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [error, setError] = useState('');
+
+  const products = [
+    { id: 'ebook', name: 'Ebook', price: 0, type: 'free' },
+    { id: 'calendar', name: '30-Day Content Calendar Template', price: 120, type: 'paid' },
+    { id: 'design', name: 'Design Templates', price: 150, type: 'paid' },
+    { id: 'bundle', name: 'Bundle (Calendar + Design Templates)', price: 240, type: 'paid' },
+    { id: 'toolkit', name: 'Full Toolkit', price: 75, type: 'paid' },
+  ];
+
+  const handlePaymentClick = (productId) => {
+    const product = products.find(p => p.id === productId);
+    if (product.type === 'free') {
+      downloadEbook();
+    } else {
+      setSelectedProduct(product);
+      setShowEmailModal(true);
+      setError('');
+    }
+  };
+
+  const downloadEbook = () => {
+    alert('Ebook downloaded! Check your downloads folder.');
+  };
+
+  const handlePaystackSuccess = (reference) => {
+    alert(`Payment successful! Reference: ${reference.reference}`);
+    setShowEmailModal(false);
+    setEmail('');
+    setSelectedProduct(null);
+  };
+
+  const handlePaystackError = () => {
+    setError('Payment cancelled or failed. Please try again.');
+  };
+
+  const initiatePayment = () => {
+    if (!email) {
+      setError('Please enter your email address');
+      return;
+    }
+
+    if (!selectedProduct) return;
+
+    const handler = window.PaystackPop.setup({
+      key: PAYSTACK_PUBLIC_KEY,
+      email: email,
+      amount: selectedProduct.price * 100,
+      ref: new Date().getTime().toString(),
+      onClose: handlePaystackError,
+      onSuccess: handlePaystackSuccess,
+    });
+    handler.openIframe();
+  };
 
   return (
     <section className="py-12 sm:py-16 lg:py-28 mb-12 sm:mb-0" id='toolkit'>
@@ -32,7 +90,9 @@ export default function Toolkit() {
             <div className="border-t border-gray-200 pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-green-600">Free</p>
             </div>
-            <button className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-purple-700 transition-all cursor-pointer">
+            <button 
+              onClick={() => handlePaymentClick('ebook')}
+              className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-purple-700 transition-all cursor-pointer">
               Download Now
             </button>
           </div>
@@ -49,7 +109,9 @@ export default function Toolkit() {
             <div className="border-t border-gray-200 pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-orange-20">$120</p>
             </div>
-            <button className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-orange-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-orange-600 transition-all cursor-pointer">
+            <button 
+              onClick={() => handlePaymentClick('calendar')}
+              className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-orange-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-orange-600 transition-all cursor-pointer">
               Get Template
             </button>
           </div>
@@ -66,7 +128,9 @@ export default function Toolkit() {
             <div className="border-t border-gray-200 pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-orange-20">$150</p>
             </div>
-            <button className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-orange-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-orange-600 transition-all cursor-pointer">
+            <button 
+              onClick={() => handlePaymentClick('design')}
+              className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-orange-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-orange-600 transition-all cursor-pointer">
               Get Templates
             </button>
           </div>
@@ -90,7 +154,9 @@ export default function Toolkit() {
               <p className="text-3xl sm:text-4xl font-bold text-purple-20">$240</p>
               <p className="text-sm text-gray-600 mt-1">Regularly $270</p>
             </div>
-            <button className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-purple-700 transition-all cursor-pointer">
+            <button 
+              onClick={() => handlePaymentClick('bundle')}
+              className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-purple-700 transition-all cursor-pointer">
               Get Bundle
             </button>
           </div>
@@ -107,12 +173,60 @@ export default function Toolkit() {
             <div className="border-t border-gray-200 pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-orange-20">$75</p>
             </div>
-            <button className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-orange-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-orange-600 transition-all cursor-pointer">
+            <button 
+              onClick={() => handlePaymentClick('toolkit')}
+              className="mt-6 w-full px-4 sm:px-6 py-3 sm:py-4 bg-orange-20 text-white rounded-lg font-medium text-sm sm:text-base hover:bg-orange-600 transition-all cursor-pointer">
               Get Full Toolkit
             </button>
           </div>
         </div>
       </div>
+
+      {/* Email Modal for Payment */}
+      {showEmailModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full">
+            <h3 className="text-2xl font-bold text-purple-20 mb-2">Enter Your Email</h3>
+            <p className="text-gray-600 text-sm mb-6">
+              We'll send your {selectedProduct?.name} to this email after payment.
+            </p>
+            
+            {error && (
+              <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+            
+            <input
+              type="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-purple-20 disabled:bg-gray-100"
+            />
+            
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  setShowEmailModal(false);
+                  setEmail('');
+                  setSelectedProduct(null);
+                  setError('');
+                }}
+                className="flex-1 px-4 py-3 bg-gray-200 text-gray-900 rounded-lg font-medium hover:bg-gray-300 transition-all"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={initiatePayment}
+                className="flex-1 px-4 py-3 bg-purple-20 text-white rounded-lg font-medium hover:bg-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {`Pay ₦${selectedProduct?.price * 1000}`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
