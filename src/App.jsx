@@ -25,6 +25,7 @@ import whatsapp from './assets/whatsapp.png'
 import linked from './assets/linked.png'
 import Header from "./header.jsx";
 import Newsletter from "./newsleter.jsx";
+import Toolkit from "./toolkit.jsx";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -142,73 +143,7 @@ function App() {
       </section>
 
       {/* Toolkit Section */}
-      <section className="py-12 sm:py-16 lg:py-28 mb-12 sm:mb-0" id='toolkit'>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-purple-20 font-bold mb-4 sm:mb-6">
-              The Complete Social Media Toolkit
-            </h2>
-            <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto">
-              Everything you need to plan, design, and post content that performs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-10 sm:mb-12">
-            {/* Toolkit Item 1 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
-              <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
-                <img src={calendar} alt="Content Calendar" className="max-w-full max-h-full object-contain" loading="lazy" />
-              </div>
-              <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-purple-20 mb-2 leading-tight mt-auto">
-                30-Day Content Calendar
-              </h3>
-              <div className="h-0.5 sm:h-1 w-10 sm:w-12 bg-purple-20"/>
-            </div>
-
-            {/* Toolkit Item 2 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
-              <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
-                <img src={template} alt="Design Template" className="max-w-full max-h-full object-contain" loading="lazy" />
-              </div>
-              <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-purple-20 mb-2 leading-tight mt-auto">
-                Design Template
-              </h3>
-              <div className="h-0.5 sm:h-1 w-10 sm:w-12 bg-purple-20"/>
-            </div>
-
-            {/* Toolkit Item 3 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
-              <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
-                <img src={book} alt="Expert E-Book" className="max-w-full max-h-full object-contain" loading="lazy" />
-              </div>
-              <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-purple-20 mb-2 leading-tight mt-auto">
-                Expert E-Book
-              </h3>
-              <div className="h-0.5 sm:h-1 w-10 sm:w-12 bg-purple-20" />
-            </div>
-
-            {/* Toolkit Item 4 */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2 flex flex-col">
-              <div className="w-full h-40 sm:h-48 lg:h-56 flex items-center justify-center mb-3 sm:mb-4">
-                <img src={kit} alt="Full Content Kit" className="max-w-full max-h-full object-contain" loading="lazy" />
-              </div>
-              <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-purple-20 mb-2 leading-tight mt-auto">
-                Full Content Kit
-              </h3>
-              <div className="h-0.5 sm:h-1 w-10 sm:w-12 bg-purple-20" />
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a
-              href="https://wa.me/+2349027964720" target="_blank"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-orange-20 text-white rounded-full font-medium text-sm sm:text-base hover:bg-purple-20 transition-all shadow-lg hover:shadow-xl"
-            >
-              Get the Toolkit
-            </a>
-          </div>
-        </div>
-      </section>
+        <Toolkit />
 
       {/* Beyond Social Media Management */}
       <section className="py-12 sm:py-16 lg:py-28 bg-white mb-12 sm:mb-0" id='about'>
@@ -277,7 +212,7 @@ function App() {
           </div>
 
           <div className="grid grid-cols-1 text-orange-20 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-14 ">
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-all hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 Jemma transformed our social strategy. The growth and engagement speak for themselves
@@ -285,7 +220,7 @@ function App() {
               <p className="text-xs sm:text-sm font-semibold text-gray-900">_Lavish Treats</p>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-all hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 So glad i have you all. I started all this at the right time. I have no idea I would start my own
@@ -294,7 +229,7 @@ function App() {
               <p className="text-xs sm:text-sm font-semibold text-gray-900">_Topp Lymphatics</p>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-all hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 Working with Jemma is like Having an in-house creative team without the overhead
@@ -302,7 +237,7 @@ function App() {
               <p className="text-xs sm:text-sm font-semibold text-gray-900">_Anu Taiwo Property</p>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-transform transition-shadow hover:-translate-y-2">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transform transition-all hover:-translate-y-2">
               <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                 <span className="text-3xl sm:text-4xl text-orange-20 leading-none">"</span>
                 The Jemma Team have truly been godsend! Thank you for caring
