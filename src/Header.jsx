@@ -58,7 +58,7 @@ export default function Header() {
         </a>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Drwn */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           menuOpen ? 'max-h-[400px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
