@@ -25,7 +25,7 @@ import whatsapp from './assets/whatsapp.png'
 import linked from './assets/linked.png'
 import Header from "./Header.jsx";
 import Newsletter from "./Newsletter.jsx";
-import Toolkit from "./Toolkit.jsx";
+import Toolkit from "./toolkit.jsx";
 import Form from "./Form.jsx";
 
 function App() {
