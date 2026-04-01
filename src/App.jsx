@@ -23,12 +23,14 @@ import mail from './assets/mail.png'
 import insta from './assets/insta.png'
 import whatsapp from './assets/whatsapp.png'
 import linked from './assets/linked.png'
-import Header from "./header.jsx";
-import Newsletter from "./newsleter.jsx";
-import Toolkit from "./toolkit.jsx";
+import Header from "./Header.jsx";
+import Newsletter from "./Newsletter.jsx";
+import Toolkit from "./Toolkit.jsx";
+import Form from "./Form.jsx";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="font-serif mt-24 bg-purple-100">
@@ -47,8 +49,8 @@ function App() {
             />
 
             <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="space-y-5 sm:space-y-6 lg:space-y-8 text-center lg:text-left">
-                <div className="text-purple-20 space-y-3 sm:space-y-4">
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-center lg:text-left">
+                <div className="text-purple-20 space-y-1 sm:space-y-2">
                   <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-[1.1] sm:leading-tight">
                     Your Story, Strategically Told
                   </h1>
@@ -59,7 +61,7 @@ function App() {
 
                 <a
                   href="https://calendly.com/jemmadigitals/1hr" target="_blank"
-                  className="inline-block sm:w-auto px-6 sm:px-5 py-3 sm:py-4 bg-orange-20 text-white font-bold text-base sm:text-lg shadow-lg hover:bg-[#e08700] transition-colors"
+                  className="inline-block sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-orange-20 text-white font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:shadow-orange-20/40 transition-all duration-200 rounded-lg transform hover:-translate-y-0.5"
                 >
                   Amplify Your Brand
                 </a>
@@ -104,7 +106,7 @@ function App() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center max-w-6xl mx-auto">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl sm:text-4xl text-purple-20 md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl text-purple-20 md:text-5xl font-bold mb-2 sm:mb-3 leading-tight">
                 Go Behind The Feed With Jemma
               </h2>
 
@@ -112,23 +114,25 @@ function App() {
                 <img src={phone} alt="Decorative line" className="h-1 w-36 sm:w-48 " />
               </div>
 
-              <p className="text-gray-600 text-base font-semibold sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                <span className="text-3xl sm:text-4xl text-purple-20">"</span>
-                <span className="font-bold">Behind the Feed with Jemma</span>
-                " delivers exclusive insights three times a month, breaking down the strategies, frameworks, and
-                systems behind top performing campaigns, giving you actionable guidance to grow your own brand on social
-                media.
+              <p className="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                <span className="text-xl sm:text-4xl text-purple-20">"</span>
+                <span className="font-bold text-purple-20">Behind the Feed with Jemma</span>
+                <span className="text-xl sm:text-4xl text-purple-20">"</span>
+                <span className="font-medium">
+                  delivers exclusive insights three times a month, breaking down the strategies, frameworks, and
+                  systems behind top performing campaigns, giving you actionable guidance to grow your own brand on social
+                  media. </span>
               </p>
 
               <a
                 onClick={() => setShowModal(true)}
-                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-full font-medium text-sm sm:text-base hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:shadow-lg hover:shadow-purple-20/40 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
               >
                 Subscribe Now
               </a>
-             
+
             </div>
-            
+
 
             <div className="bg-gradient-to-br from-pink-100 to-purple-400 rounded-2xl sm:rounded-3xl h-72 sm:h-80 lg:h-96 flex items-center justify-center p-4 sm:p-6">
               <img
@@ -143,13 +147,13 @@ function App() {
       </section>
 
       {/* Toolkit Section */}
-        <Toolkit />
+      <Toolkit />
 
       {/* Beyond Social Media Management */}
       <section className="py-12 sm:py-16 lg:py-28 bg-white mb-12 sm:mb-0" id='about'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-            <h2 className="text-3xl text-purple-20 sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-3xl text-purple-20 sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3">
               Beyond Social Media Management
             </h2>
           </div>
@@ -157,8 +161,7 @@ function App() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-purple-50 to-purple-30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12">
               <p className="text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                We architect digital ecosystems for long-term brand growth combining strategy, creativity, and
-                performance insights into one cohesive system.
+                We architect digital ecosystems for long-term brand growth, combining strategy, creativity, and performance insights into one cohesive system.
               </p>
 
               <ul className="space-y-2 sm:space-y-3 text-gray-600 text-sm sm:text-base">
@@ -181,14 +184,14 @@ function App() {
               </ul>
 
               <p className='text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed"'>
-                Expanded Services: <br />
-                Brand & digital consultation · Paid Advertising ·  Website design & development · SEO & search visibility optimization
+                <span className='font-extrabold'>Expanded Services:</span> <br />
+                ·  Brand & digital consultation · <br />· Paid Advertising <br /> · Website design & development <br />· SEO & search visibility optimization
               </p>
 
               <div className="mt-6 sm:mt-8">
                 <a
                   href="https://calendly.com/jemmadigitals/1hr" target="_blank"
-                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-full font-medium text-sm sm:text-base hover:bg-purple-600 transition-all shadow-lg hover:shadow-xl"
+                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:shadow-lg hover:shadow-purple-20/40 transition-all duration-200 transform hover:-translate-y-0.5"
                 >
                   Book a Free Strategy Call
                 </a>
@@ -202,7 +205,7 @@ function App() {
       <section className="py-12 sm:py-16 lg:py-28 bg-gray-50 mb-12 sm:mb-0" id='testimonials'>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl text-purple-20 md:text-5xl font-bold mb-6 sm:mb-8">
+            <h2 className="text-3xl sm:text-4xl text-purple-20 md:text-5xl font-bold mb-3 sm:mb-4">
               Trusted By Brands Who Demand Results
             </h2>
             <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
@@ -319,8 +322,9 @@ function App() {
                 Subscribe to Newsletter
               </button>
             </div>
-            
+
             <Newsletter showModal={showModal} setShowModal={setShowModal} />
+            <Form showForm={showForm} setShowForm={setShowForm} />
 
             <div className="flex gap-4 justify-center items-center mt-8">
               <a href="mailto:info@tryjemma.com" target="_blank" rel="noopener noreferrer">

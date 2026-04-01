@@ -11,10 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@paystack/inline-js": "^2.22.8",
+    "@supabase/supabase-js": "^2.100.1",
     "@tailwindcss/vite": "^4.1.18",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
     "express": "^5.2.1",
+    "flutterwave-react-v3": "^1.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

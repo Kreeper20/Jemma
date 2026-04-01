@@ -1,8 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Adjust to your navbar height */
+    scroll-padding-top: 80px;
+}
+
+/* Smooth transitions for all interactive elements */
+@layer components {
+  button, a, input, textarea, select {
+    @apply transition-all duration-200;
   }
+  
+  input:focus, textarea:focus, select:focus {
+    @apply transition-all duration-200;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(69, 0, 101, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(69, 0, 101, 0.5);
+  }
+}

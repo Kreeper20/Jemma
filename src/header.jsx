@@ -8,7 +8,7 @@ export default function Header() {
     <header className="fixed top-0 font-serif bg-white text-[#450065] shadow-[0_2px_10px_rgba(0,0,0,0.55)] px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 w-full left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-        {/* Logo */}
+       
         <a href="/" className="shrink-0">
           <img
             src={jema}
@@ -17,7 +17,7 @@ export default function Header() {
           />
         </a>
 
-        {/* Mobile Hamburger */}
+    
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden flex flex-col gap-1.5 p-2"
@@ -40,21 +40,21 @@ export default function Header() {
           />
         </button>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center font-bold gap-6 xl:gap-10 underline">
-          <a href="#home" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Home</a>
-          <a href="#newsletter" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Newsletter</a>
-          <a href="#toolkit" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Toolkit</a>
-          <a href="#about" className="text-sm xl:text-base hover:text-purple-20 transition-colors">About</a>
-          <a href="#testimonials" className="text-sm xl:text-base hover:text-purple-20 transition-colors">Testimonials</a>
+     
+        <nav className="hidden lg:flex items-center font-bold gap-6 xl:gap-10">
+          <a href="#home" className="text-sm xl:text-base text-purple-20 hover:text-orange-20 transition-all duration-200 underline decoration-transparent hover:decoration-current">Home</a>
+          <a href="#newsletter" className="text-sm xl:text-base text-purple-20 hover:text-orange-20 transition-all duration-200 underline decoration-transparent hover:decoration-current">Newsletter</a>
+          <a href="#toolkit" className="text-sm xl:text-base text-purple-20 hover:text-orange-20 transition-all duration-200 underline decoration-transparent hover:decoration-current">Toolkit</a>
+          <a href="#about" className="text-sm xl:text-base text-purple-20 hover:text-orange-20 transition-all duration-200 underline decoration-transparent hover:decoration-current">About</a>
+          <a href="#testimonials" className="text-sm xl:text-base text-purple-20 hover:text-orange-20 transition-all duration-200 underline decoration-transparent hover:decoration-current">Testimonials</a>
         </nav>
 
-        {/* Desktop CTA */}
+
         <a
           href="#contact"
-          className="hidden lg:flex w-40 xl:w-48 h-11 xl:h-12 border-[#450065] border-2 xl:border-4 items-center justify-center bg-white hover:bg-[#450065] hover:text-white transition-all duration-300"
+          className="hidden lg:flex w-40 xl:w-48 h-11 xl:h-12 border-[#450065] border-2 xl:border-4 items-center justify-center bg-white text-purple-20 font-bold text-sm xl:text-base rounded-lg transition-all duration-300 hover:bg-purple-20 hover:text-white hover:shadow-lg hover:shadow-purple-20/30 transform hover:-translate-y-0.5"
         >
-          <span className="font-bold text-sm xl:text-base underline">Contact Us</span>
+          <span>Contact Us</span>
         </a>
       </div>
 
@@ -65,19 +65,19 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col gap-1 border-t border-gray-200 pt-4">
-          <a href="#home" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#home" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline text-purple-20 hover:bg-purple-50 hover:text-orange-20 rounded-lg transition-all duration-200">
             Home
           </a>
-          <a href="#newsletter" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#newsletter" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline text-purple-20 hover:bg-purple-50 hover:text-orange-20 rounded-lg transition-all duration-200">
             Newsletter
           </a>
-          <a href="#toolkit" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#toolkit" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline text-purple-20 hover:bg-purple-50 hover:text-orange-20 rounded-lg transition-all duration-200">
             Toolkit
           </a>
-          <a href="#about" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#about" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline text-purple-20 hover:bg-purple-50 hover:text-orange-20 rounded-lg transition-all duration-200">
             About
           </a>
-          <a href="#testimonials" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline hover:bg-purple-50 rounded-lg transition-colors">
+          <a href="#testimonials" onClick={() => setMenuOpen(false)} className="font-bold text-base py-3 px-2 underline text-purple-20 hover:bg-purple-50 hover:text-orange-20 rounded-lg transition-all duration-200">
             Testimonials
           </a>
 

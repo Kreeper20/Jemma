@@ -18,7 +18,7 @@ return (
                     className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors text-xl cursor-pointer"
                     aria-label="Close"
                   >
-                    ✕
+                    ✕s
                   </button>
                   <div className="flex justify-center">
                     <iframe className='w-full h-48 sm:h-56 lg:h-64 border border-gray-200 rounded-lg'
