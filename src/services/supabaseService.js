@@ -73,20 +73,23 @@ export const saveFormToDatabase = async (formData, tableName = 'Brand Details') 
 };
 
 // Save email for ebook downloads
-export const saveEbookEmail = async (email, tableName = 'Ebook Downloads') => {
+export const saveEbookEmail = async (email, tableName = 'Brand Details') => {
   try {
     const { data, error } = await supabase
       .from(tableName)
-      .insert([{ email, downloaded_at: new Date().toISOString() }])
+      .insert([{ full_name: 'Ebook Download', email }])
       .select();
 
     if (error) {
-      throw new Error(`Ebook email save failed: ${error.message}`);
+      // Log error but don't throw - allow download to proceed
+      console.warn('Ebook email save warning:', error.message);
+      return null;
     }
 
     return data;
   } catch (error) {
-    console.error('Ebook email save error:', error);
-    throw error;
+    // Gracefully handle errors without blocking download
+    console.warn('Ebook email save warning:', error);
+    return null;
   }
 };

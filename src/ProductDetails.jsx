@@ -28,7 +28,7 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
     setEmailError('');
 
     try {
-      // Save email to database
+      // Save email to database (non-blocking)
       await saveEbookEmail(ebookEmail);
 
       // Download the ebook
@@ -43,8 +43,16 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
       setEbookEmail('');
       setShowDetails(false);
     } catch (error) {
-      setEmailError('Failed to save email. Please try again.');
-      console.error('Error saving ebook email:', error);
+      // Still allow download even if there's an error
+      console.error('Error during download process:', error);
+      const link = document.createElement('a');
+      link.href = ebookPdf;
+      link.download = 'Create With Peace.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setEbookEmail('');
+      setShowDetails(false);
     } finally {
       setIsLoading(false);
     }
