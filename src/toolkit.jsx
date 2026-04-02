@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import book from './assets/books.png'
 import calendar from './assets/calendar.jpg'
-import kit from './assets/template.jpg'
+import kit from './assets/kit-image.png'
 import template from './assets/template.jpg'
 import NForm from './Form.jsx'
 import ProductDetails from './ProductDetails.jsx'
