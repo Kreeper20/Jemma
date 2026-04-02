@@ -1,17 +1,53 @@
+import { useState } from 'react';
 import ebookPdf from './assets/Create With Peace.pdf';
+import { saveEbookEmail } from './services/supabaseService';
 
 export default function ProductDetails({ showDetails, setShowDetails, selectedProduct, onProceed }) {
+  const [ebookEmail, setEbookEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [emailError, setEmailError] = useState('');
+
   if (!showDetails || !selectedProduct) return null;
 
-  const handleEbookDownload = () => {
-    // Create a link to download the ebook
-    const link = document.createElement('a');
-    link.href = ebookPdf;
-    link.download = 'Create With Peace.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setShowDetails(false);
+  const handleEbookDownload = async (e) => {
+    e.preventDefault();
+    
+    if (!ebookEmail.trim()) {
+      setEmailError('Email is required');
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(ebookEmail)) {
+      setEmailError('Please enter a valid email');
+      return;
+    }
+
+    setIsLoading(true);
+    setEmailError('');
+
+    try {
+      // Save email to database
+      await saveEbookEmail(ebookEmail);
+
+      // Download the ebook
+      const link = document.createElement('a');
+      link.href = ebookPdf;
+      link.download = 'Create With Peace.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Reset and close
+      setEbookEmail('');
+      setShowDetails(false);
+    } catch (error) {
+      setEmailError('Failed to save email. Please try again.');
+      console.error('Error saving ebook email:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const productDetails = {
@@ -133,6 +169,24 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
             <p className="text-3xl sm:text-4xl font-bold text-orange-20">{details.price}</p>
           </div>
 
+          {/* Email Form for Ebook */}
+          {selectedProduct.key === 'ebook' && (
+            <div className="bg-purple-50 p-4 sm:p-5 rounded-lg border border-purple-200">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input
+                type="email"
+                value={ebookEmail}
+                onChange={(e) => {
+                  setEbookEmail(e.target.value);
+                  setEmailError('');
+                }}
+                placeholder="your@email.com"
+                className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-20 focus:border-transparent"
+              />
+              {emailError && <p className="text-red-500 text-xs sm:text-sm mt-2">{emailError}</p>}
+            </div>
+          )}
+
           {/* Action buttons */}
           <div className="flex gap-2 sm:gap-3 pt-4 sm:pt-6 border-t border-gray-200">
             <button
@@ -143,9 +197,10 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
             </button>
             <button
               onClick={selectedProduct.key === 'ebook' ? handleEbookDownload : onProceed}
-              className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-orange-20 to-orange-600 text-white rounded-lg font-medium text-xs sm:text-base hover:shadow-lg hover:shadow-orange-20/40 transition-all duration-200 transform hover:-translate-y-0.5"
+              disabled={selectedProduct.key === 'ebook' && isLoading}
+              className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-orange-20 to-orange-600 text-white rounded-lg font-medium text-xs sm:text-base hover:shadow-lg hover:shadow-orange-20/40 transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {selectedProduct.key === 'ebook' ? 'Download Now' : 'Proceed to Checkout'}
+              {selectedProduct.key === 'ebook' ? (isLoading ? 'Downloading...' : 'Download Now') : 'Proceed to Checkout'}
             </button>
           </div>
         </div>
