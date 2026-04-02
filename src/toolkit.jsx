@@ -50,7 +50,7 @@ export default function Toolkit() {
             <div className="w-full h-32 sm:h-40 flex items-center justify-center mb-2">
               <img src={book} alt="Ebook" className="max-w-full max-h-full object-contain" loading="lazy" />
             </div>
-            <h3 className="text-base sm:text-lg font-bold text-purple-20 mb-1">Ebook</h3>
+            <h3 className="text-base sm:text-lg font-bold text-purple-20 mb-1">Create With Peace Ebook</h3>
             <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow leading-relaxed">
               Essential guide to growing your brand on social media with proven strategies and frameworks.
             </p>

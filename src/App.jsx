@@ -60,7 +60,7 @@ function App() {
                 </div>
 
                 <a
-                  href="https://calendly.com/jemmadigitals/1hr" target="_blank"
+                  href="https://calendly.com/tryjemma-info" target="_blank"
                   className="inline-block sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-orange-20 text-white font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:shadow-orange-20/40 transition-all duration-200 rounded-lg transform hover:-translate-y-0.5"
                 >
                   Amplify Your Brand
@@ -190,7 +190,7 @@ function App() {
 
               <div className="mt-6 sm:mt-8">
                 <a
-                  href="https://calendly.com/jemmadigitals/1hr" target="_blank"
+                  href="https://calendly.com/tryjemma-info" target="_blank"
                   className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:shadow-lg hover:shadow-purple-20/40 transition-all duration-200 transform hover:-translate-y-0.5"
                 >
                   Book a Free Strategy Call
@@ -304,7 +304,7 @@ function App() {
 
             <div className="flex flex-row flex-wrap gap-2 sm:gap-3 justify-center items-center">
               <a
-                href="https://calendly.com/jemmadigitals/1hr" target="_blank"
+                href="https://calendly.com/tryjemma-info" target="_blank"
                 className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-purple-20 text-white rounded-full font-medium text-xs sm:text-sm md:text-base hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl text-center"
               >
                 Book a Free Strategy Call

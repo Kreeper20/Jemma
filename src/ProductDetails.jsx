@@ -4,8 +4,8 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
   const handleEbookDownload = () => {
     // Create a link to download the ebook
     const link = document.createElement('a');
-    link.href = '/ebook/Post-With-Peace-Ebook.pdf'; // Update this path to your ebook location
-    link.download = 'Post-With-Peace-Ebook.pdf';
+    link.href = 'src/assets/Create With Peace.pdf'; // Update this path to your ebook location
+    link.download = 'Create With Peace Ebook.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -45,7 +45,7 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
       features: [
         "30-Day Content Calendar",
         "20+ Canva Design Templates",
-        "Post With Peace Ebook",
+        "Create With Peace Ebook",
         "Quarterly strategy guide",
         "Email support included"
       ],
@@ -58,7 +58,7 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
       features: [
         "30-Day Content Calendar (quarterly)",
         "50+ Canva Design Templates",
-        "Post With Peace Ebook",
+        "Create With Peace Ebook",
         "Brand guidelines template",
         "Content performance tracker",
         "Monthly strategy calls included"
@@ -67,7 +67,7 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
       price: "$75"
     },
     ebook: {
-      title: "Post With Peace — Ebook",
+      title: "Create With Peace — Ebook",
       description: "A practical guide to help you show up online with clarity and consistency. Learn simple content systems and proven strategies that take the guesswork out of growing your brand on social media.",
       features: [
         "Content planning framework",
@@ -76,7 +76,6 @@ export default function ProductDetails({ showDetails, setShowDetails, selectedPr
         "Overcoming imposter syndrome",
         "Real examples from successful creators"
       ],
-      timeline: "Instant digital download",
       price: "FREE"
     }
   };
