@@ -1,11 +1,13 @@
+import ebookPdf from './assets/Create With Peace.pdf';
+
 export default function ProductDetails({ showDetails, setShowDetails, selectedProduct, onProceed }) {
   if (!showDetails || !selectedProduct) return null;
 
   const handleEbookDownload = () => {
     // Create a link to download the ebook
     const link = document.createElement('a');
-    link.href = 'src/assets/Create With Peace.pdf'; // Update this path to your ebook location
-    link.download = 'Create With Peace Ebook.pdf';
+    link.href = ebookPdf;
+    link.download = 'Create With Peace.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

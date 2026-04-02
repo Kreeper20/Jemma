@@ -5,7 +5,7 @@ import kaizo from './assets/kaizo.png'
 import sb from './assets/sb.png'
 import hybrid from './assets/hybrid.png'
 import gcunite from './assets/gcunite.png'
-import kit from './assets/kit.jpg'
+import kit from './assets/kit.png'
 import calendar from './assets/calendar.jpg'
 import higherdrive from './assets/higherdrive.png'
 import shape from './assets/shaping.png'
@@ -23,6 +23,11 @@ import mail from './assets/mail.png'
 import insta from './assets/insta.png'
 import whatsapp from './assets/whatsapp.png'
 import linked from './assets/linked.png'
+import affirmwelness from './assets/affirmwelness.png'
+import linkempower from './assets/linkempower.png'
+import topp from './assets/Topp.png'
+import udeaki from './assets/UDE Aki.png'
+import wallbraidge from './assets/wallbraidge.png'
 import Header from "./Header.jsx";
 import Newsletter from "./Newsletter.jsx";
 import Toolkit from "./toolkit.jsx";
@@ -154,46 +159,68 @@ function App() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl text-purple-20 sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3">
-              Beyond Social Media Management
+              Built Beyond Social Media
             </h2>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-purple-50 to-purple-30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12">
-              <p className="text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                We architect digital ecosystems for long-term brand growth, combining strategy, creativity, and performance insights into one cohesive system.
+              <p className="text-gray-700 text-base sm:text-lg mb-2 sm:mb-3 leading-relaxed">
+                We design and manage digital ecosystems that help your brand grow with clarity and intention.
               </p>
 
-              <ul className="space-y-2 sm:space-y-3 text-gray-600 text-sm sm:text-base">
-                <li className="flex items-start gap-2 sm:gap-3">
-                  <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
-                  <span>Strategy & Brand Positioning & Campaign Development</span>
-                </li>
-                <li className="flex items-start gap-2 sm:gap-3">
-                  <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
-                  <span>Content Creation Visual Design & Video Editing</span>
-                </li>
-                <li className="flex items-start gap-2 sm:gap-3">
-                  <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
-                  <span>Scheduling & Community Management</span>
-                </li>
-                <li className="flex items-start gap-2 sm:gap-3">
-                  <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
-                  <span>Analytics, Reporting & Performance Optimization</span><br /><br />
-                </li>
-              </ul>
-
-              <p className='text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed"'>
-                <span className='font-extrabold'>Expanded Services:</span> <br />
-                ·  Brand & digital consultation · <br />· Paid Advertising <br /> · Website design & development <br />· SEO & search visibility optimization
+              <p className="text-gray-700 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
+                From how your brand is positioned to how it shows up, engages, and converts, every part works together as one system.
               </p>
+
+              <div className="mb-8 sm:mb-10">
+                <h3 className="text-lg sm:text-xl font-bold text-purple-20 mb-4 sm:mb-5">Service Highlights:</h3>
+                <ul className="space-y-2 sm:space-y-3 text-gray-600 text-sm sm:text-base">
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Brand Strategy, Positioning & Campaign Direction</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Content Production (Design, Video Editing & Storytelling)</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Content Planning, Scheduling & Community Engagement</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Performance Tracking, Insights & Optimization</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Paid Media & Advertising</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Email Marketing & Automation</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Website Design & Development</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>SEO & Search Visibility Optimization</span>
+                  </li>
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-purple-20 mt-0.5 sm:mt-1 shrink-0">✓</span>
+                    <span>Brand & Digital Consulting</span>
+                  </li>
+                </ul>
+              </div>
 
               <div className="mt-6 sm:mt-8">
                 <a
                   href="https://calendly.com/tryjemma-info" target="_blank"
                   className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-purple-20 text-white rounded-lg font-medium text-sm sm:text-base hover:shadow-lg hover:shadow-purple-20/40 transition-all duration-200 transform hover:-translate-y-0.5"
                 >
-                  Book a Free Strategy Call
+                  Start Your Strategy Session
                 </a>
               </div>
             </div>
@@ -271,12 +298,17 @@ function App() {
             <div className="flex animate-scroll-reverse gap-8 sm:gap-12 lg:gap-16">
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="flex shrink-0 gap-8 sm:gap-12 lg:gap-16 items-center">
-                  <img src={md} alt="M&D" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
-                  <img src={atp} alt="ATP" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
-                  <img src={john} alt="O John Cuisine" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
-                  <img src={shape} alt="Shaping Us" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
-                  <img src={boe} alt="BOE" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
-                  <img src={vabe} alt="Vabe UK" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={md} alt="M&D" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={atp} alt="ATP" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={john} alt="O John Cuisine" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={shape} alt="Shaping Us" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={boe} alt="BOE" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={vabe} alt="Vabe UK" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={affirmwelness} alt="Affirm Wellness" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={linkempower} alt="Link Empower" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={topp} alt="Topp" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={udeaki} alt="UDE Aki" className="h-10 sm:h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
+                  <img src={wallbraidge} alt="Wallbraidge" className="h-8 sm:h-10 lg:h-14 w-auto grayscale hover:grayscale-0 transition-all" loading="lazy" />
                 </div>
               ))}
             </div>
